@@ -1,0 +1,43 @@
+.page {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  box-sizing: border-box;
+  background-color: $bg-grey;
+
+  @media (min-width: $viewport-mid) {
+  }
+
+  @media (min-width: $viewport-large) {
+  }
+
+  @media (min-width: $viewport-max) {
+  }
+
+}
+
+.page__wrapper {
+  width: 304px;
+  position: relative;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: $wrapper-shadow;
+
+  @media (min-width: $viewport-mid) {
+    width: 712px;
+    padding: 24px 28px 24px 32px;
+  }
+
+  @media (min-width: $viewport-large) {
+    width: 864px;
+  }
+
+  @media (min-width: $viewport-max) {
+    width: 1200px;
+  }
+
+}

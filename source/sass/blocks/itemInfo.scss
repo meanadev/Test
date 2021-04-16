@@ -1,0 +1,388 @@
+.itemInfo {
+  position: relative;
+}
+
+.itemInfoClose {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+
+  @media (min-width: $viewport-mid) {
+    top: -8px;
+    right: -11px;
+  }
+}
+
+.close {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+
+  &::before,
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 19px;
+    width: 2px;
+    background-color: $cross-grey;
+
+    &:hover,
+    &:active {
+      background-color: $cross-grey-hover;
+    }
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }  
+
+  &:hover {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: $grey-40;
+  }
+
+  &:active {
+    background-color: $grey-100;
+  }
+}
+
+.itemInfo__flex {
+  @media (min-width: $viewport-mid) {
+    display: flex;
+    padding-top: 5px;
+    padding-left: 37px;
+  }
+
+  @media (min-width: $viewport-large) {
+    width: 500px;
+    margin: 0;
+    display: inline-flex;
+  }
+
+  @media (min-width: $viewport-max) {
+    width: 798px;
+    margin-right: 38px;
+  }
+}
+
+.img {
+  text-align: center;
+
+  @media (min-width: $viewport-mid) {
+    margin-right: 80px;
+  }
+
+  &__plan {
+    width: 86px;
+    height: 160px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+
+    @media (min-width: $viewport-max) {
+      margin-bottom: 0;;
+    }  
+  }
+}
+
+.description {
+  @media (min-width: $viewport-mid) {
+    width: 450px;
+  }
+
+  @media (min-width: $viewport-large) {
+    width: 297px;
+  }
+
+  @media (min-width: $viewport-max) {
+    width: 645px;
+  }
+}
+
+.description__header {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+
+  @media (min-width: $viewport-mid) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+  }
+}
+
+.info {
+  display: grid;
+  grid-template-rows: 36px;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 12px;
+  grid-column-gap: 40px;
+  max-width: 245px;
+
+  @media (min-width: $viewport-mid) {
+    grid-column-gap: 40px;
+  }
+
+  @media (min-width: $viewport-max) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0;
+    max-width: 430px;
+  }
+  
+  &__text {
+    margin: 0;
+    padding: 0;
+
+    &--light {
+      font-size: 12px;
+      line-height: 16px;
+      color: $text-light-grey;
+    }
+
+    &--dark {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $text-dark-grey;
+    }
+
+    &--lineHeight {
+      line-height: 14px;
+    }
+
+    &--sup {
+      font-size: 8px;
+    }
+  }
+}
+
+.additions {
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: $viewport-mid) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $viewport-large) {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $viewport-max) {
+    display: flex;
+    justify-content: unset;
+  }
+
+  &__seen {
+    @media (min-width: $viewport-max) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.additions__text {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  padding: 9px 16px 9px 35px;
+  border-radius: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+
+  &--approved {
+    margin-top: 20px;
+    background-color: $bg-green;
+    color: $text-green;
+
+    @media (min-width: $viewport-max) {
+      margin-top: 16px;
+    }    
+
+    &::before {
+      content: ' ';
+      width: 12px;
+      height: 7px;
+      border-style: hidden hidden solid solid;
+      transform: rotate(-45deg) translate(0,-100%);
+      position: absolute;
+      left: 20px;
+      top: 16px;
+      border-bottom: 2px solid;
+      border-left: 2px solid;
+    }
+  }
+
+  &--disapproved {
+    margin-top: 6px;
+    background-color: $bg-red;
+    color: $text-red;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 20px;
+      content: ' ';
+      height: 14px;
+      width: 2px;
+      background: $text-red;  
+    }
+
+    &::before {
+    transform: rotate(45deg);
+    }
+
+    &::after {
+    transform: rotate(-45deg);
+    }
+  }
+}
+
+.price {
+  position: relative;
+  margin: 0;
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-light-grey;
+
+  @media (min-width: $viewport-mid) {
+    padding-top: 15px;
+  }
+
+  @media (min-width: $viewport-large) {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    padding-left: 32px;
+    padding-top: 0;
+  }
+
+  &__lower {
+    margin-bottom: 15px;
+
+    @media (min-width: $viewport-mid) {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $viewport-large) {
+      margin-bottom: 111px;
+    }  
+
+    @media (min-width: $viewport-max) {
+      margin-bottom: 25px;
+    }  
+  }
+
+  &::before {
+    content: ' ';
+    width: 268px;
+    height: 1px;
+    position: absolute;
+    top: 0px;
+    background-color: $line-grey;
+
+    @media (min-width: $viewport-mid) {
+      width: 652px;
+    }
+  
+    @media (min-width: $viewport-large) {
+      width: 1px;
+      height: 266px;
+      left: 0;
+      top: 10px;
+    }
+  
+    @media (min-width: $viewport-max) {
+      height: 178px;
+      top: 11px;
+    }
+  }
+}
+
+.date {
+  color: $text-blue;
+}
+
+.bookingPriceText {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.bookingPrice {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $text-dark-grey;
+
+  @media (min-width: $viewport-mid) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.alertPrice {
+  color: $text-red;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 50px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-dark-grey;
+  text-decoration: none;
+  background-color: $btn-yellow;
+  border-radius: 6px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 168px;
+  }
+
+  &__key {
+    display: inline-block;
+    width: 16px;
+    height: 16px;  
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: $btn-yellow-hover;
+  }
+
+  &:active {
+    background-color: $btn-yellow-active;
+  }
+}

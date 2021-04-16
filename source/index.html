@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head title="Test">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta description="Test for work">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+    <link rel="preload" href="fonts/roboto-v27-latin_cyrilic-regular.woff2" as="font">
+  </head>
+  <body class="page">
+    <svg style="display:none">
+      <symbol id="key" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.68294 7.5634C9.88707 7.08313 10 6.55475 10 6C10 3.79086 8.20914 2 6 2C3.79086 2 2 3.79086 2 6C2 8.20914 3.79086 10 6 10C6.55379 10 7.0813 9.88746 7.5609 9.684L8.68825 10.8113C8.74736 10.8705 8.83209 10.8961 8.91406 10.8797L10.1826 10.626C10.3576 10.591 10.5119 10.7454 10.4768 10.9204L10.2698 11.9514C10.2347 12.1263 10.3888 12.2806 10.5637 12.2458L11.5975 12.0398C11.7723 12.005 11.9264 12.1591 11.8915 12.334L11.6379 13.6036C11.6215 13.6856 11.6472 13.7703 11.7063 13.8294L11.8474 13.9705C11.9239 14.047 12.0231 14.0966 12.1302 14.1119L13.1202 14.2533C13.7802 14.3476 14.3458 13.7819 14.2516 13.122L14.1101 12.132C14.0948 12.0249 14.0452 11.9257 13.9687 11.8492L9.68294 7.5634ZM5.5 7C6.32843 7 7 6.32843 7 5.5C7 4.67157 6.32843 4 5.5 4C4.67157 4 4 4.67157 4 5.5C4 6.32843 4.67157 7 5.5 7Z" fill="#383736"/>
+      </symbol>
+    </svg>
+    <div class="page__wrapper">
+      <header></header>
+    
+      <main class="page__main main">
+        <section class="itemInfo">
+          <div class="itemInfoClose">
+            <a class="itemInfo__close close"></a>
+          </div>
+
+          <div class="itemInfo__flex">  
+            <div class="itemInfo__img img">
+              <picture>
+                <source srcset="img/group.webp, img/group@2x.webp 2x" type="image/webp">
+                <img class="img__plan" src="img/group.png" srcset="img/group@2x.png 2x" alt="apartment plan">
+              </picture>
+            </div>
+            <div class="itemInfo__description description">
+              <h2 class="description__header">2-к квартира</h2>
+              <div class="description__info info">
+                <div class="info__floor ">
+                  <p class="info__text info__text--light">Этаж</p>
+                  <p class="info__text info__text--dark">3 из 19</p>
+                </div>
+                <div class="info__height">
+                  <p class="info__text info__text--light">Высота потолков</p>
+                  <p class="info__text info__text--dark">3,2 м</p>
+                </div>
+                <div class="info__space">
+                  <p class="info__text info__text--light">Общая площадь</p>
+                  <p class="info__text info__text--dark info__text--lineHeight">32,24 м<sup class="info__text info__text--sup">2</sup></p>
+                </div>
+                <div class="info__finishing">
+                  <p class="info__text info__text--light">Отделка</p>
+                  <p class="info__text info__text--dark">Предчистовая</p>
+                </div>
+                 <div class="info__area">
+                   <p class="info__text info__text--light">Жилая площадь</p>
+                   <p class="info__text info__text--dark info__text--lineHeight">22,24 м<sup class="info__text info__text--sup">2</sup></p>
+                </div>
+                <div class="info__kitchen">
+                  <p class="info__text info__text--light">Площадь кухни</p>
+                  <p class="info__text info__text--dark info__text--lineHeight">14,24 м<sup class="info__text info__text--sup">2</sup></p>
+               </div>
+              </div>
+              <div class="additions">
+                <div class="additions__seen">
+                  <p class="additions__text additions__text--approved">Вы были на просмотре</p>
+                </div>
+                <div class="additions__bankInfo">
+                 <p class="additions__text additions__text--disapproved">Дом аккредитован другим банком</p>
+               </div>
+              </div>
+            </div>
+  
+          </div>
+          <div class="itemInfo__price price">
+            <div class="price__upper">
+              <p class="bookingPriceText">Ваша цена по брони до <span class="date">19 сентября</span></p>
+              <p class="bookingPrice">3 312 666 Р</p>  
+            </div>
+            <div class="price__lower">
+              <p class="bookingPriceText">Текущая цена у застройщика<br>
+              дороже на <span class="alertPrice">324 825 Р</span></p>  
+            </div>
+            <a href="#" class="price__btn btn">
+              <div class="btn__inner">
+                <picture>
+                  <svg class="btn__key">
+                    <use href=#key></use>
+                  </svg>
+                </picture>
+                <p class="btn__text">Выбрать для покупки</p>  
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>  
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
